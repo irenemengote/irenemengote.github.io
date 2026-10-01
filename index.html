@@ -1,0 +1,517 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Irene H. Mengote | Portfolio</title>
+
+    <style>
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+
+        html {
+            scroll-behavior: smooth;
+        }
+
+        body {
+            font-family: Arial, Helvetica, sans-serif;
+            color: #333;
+            background: #faf9f7;
+            line-height: 1.6;
+        }
+
+        nav {
+            position: sticky;
+            top: 0;
+            z-index: 1000;
+            background: rgba(250, 249, 247, 0.95);
+            border-bottom: 1px solid #e8e3dd;
+            padding: 18px 8%;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .logo {
+            font-size: 20px;
+            font-weight: bold;
+            color: #333;
+        }
+
+        nav a {
+            text-decoration: none;
+            color: #555;
+            margin-left: 25px;
+            font-size: 14px;
+        }
+
+        nav a:hover {
+            color: #9a6b78;
+        }
+
+        .hero {
+            min-height: 88vh;
+            display: flex;
+            align-items: center;
+            padding: 80px 10%;
+        }
+
+        .hero-content {
+            max-width: 750px;
+        }
+
+        .small-title {
+            color: #9a6b78;
+            font-size: 14px;
+            letter-spacing: 2px;
+            font-weight: bold;
+            margin-bottom: 15px;
+        }
+
+        h1 {
+            font-size: clamp(48px, 8vw, 82px);
+            line-height: 1;
+            margin-bottom: 20px;
+            color: #292525;
+        }
+
+        .hero h2 {
+            font-size: 25px;
+            font-weight: normal;
+            color: #666;
+            margin-bottom: 25px;
+        }
+
+        .hero p {
+            max-width: 650px;
+            color: #666;
+            font-size: 17px;
+            margin-bottom: 35px;
+        }
+
+        .buttons {
+            display: flex;
+            gap: 15px;
+            flex-wrap: wrap;
+        }
+
+        .button {
+            display: inline-block;
+            padding: 13px 24px;
+            border-radius: 30px;
+            text-decoration: none;
+            font-size: 14px;
+            transition: 0.3s;
+        }
+
+        .primary {
+            background: #9a6b78;
+            color: white;
+        }
+
+        .primary:hover {
+            background: #805664;
+        }
+
+        .secondary {
+            border: 1px solid #9a6b78;
+            color: #9a6b78;
+        }
+
+        .secondary:hover {
+            background: #f0e7e9;
+        }
+
+        section {
+            padding: 90px 10%;
+        }
+
+        .section-title {
+            font-size: 38px;
+            margin-bottom: 15px;
+            color: #292525;
+        }
+
+        .section-intro {
+            color: #777;
+            max-width: 650px;
+            margin-bottom: 45px;
+        }
+
+        .about {
+            background: white;
+        }
+
+        .about-text {
+            max-width: 800px;
+            color: #555;
+            font-size: 17px;
+        }
+
+        .skills-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 18px;
+            margin-top: 35px;
+        }
+
+        .skill {
+            background: white;
+            padding: 25px;
+            border: 1px solid #eee5e1;
+            border-radius: 15px;
+        }
+
+        .skill h3 {
+            margin-bottom: 8px;
+            color: #9a6b78;
+        }
+
+        .skill p {
+            color: #777;
+            font-size: 14px;
+        }
+
+        .projects {
+            background: #f5f1ee;
+        }
+
+        .project-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+            gap: 25px;
+        }
+
+        .project {
+            background: white;
+            padding: 30px;
+            border-radius: 18px;
+            border: 1px solid #eee5e1;
+        }
+
+        .project-label {
+            font-size: 12px;
+            color: #9a6b78;
+            letter-spacing: 1px;
+            font-weight: bold;
+            margin-bottom: 10px;
+        }
+
+        .project h3 {
+            font-size: 23px;
+            margin-bottom: 12px;
+        }
+
+        .project p {
+            color: #777;
+            font-size: 15px;
+            margin-bottom: 20px;
+        }
+
+        .project a {
+            color: #9a6b78;
+            text-decoration: none;
+            font-weight: bold;
+            font-size: 14px;
+        }
+
+        .contact {
+            text-align: center;
+            background: white;
+        }
+
+        .contact p {
+            color: #777;
+            max-width: 600px;
+            margin: 0 auto 25px;
+        }
+
+        footer {
+            text-align: center;
+            padding: 30px;
+            background: #292525;
+            color: #ddd;
+            font-size: 13px;
+        }
+
+        @media (max-width: 700px) {
+            nav {
+                padding: 15px 5%;
+            }
+
+            nav a {
+                margin-left: 10px;
+                font-size: 12px;
+            }
+
+            .hero {
+                padding: 70px 7%;
+            }
+
+            section {
+                padding: 70px 7%;
+            }
+
+            h1 {
+                font-size: 55px;
+            }
+        }
+    </style>
+</head>
+
+<body>
+
+    <nav>
+        <div class="logo">IRENE.</div>
+
+        <div>
+            <a href="#about">About</a>
+            <a href="#experience">Experience</a>
+            <a href="#projects">Projects</a>
+            <a href="#skills">Skills</a>
+            <a href="#contact">Contact</a>
+        </div>
+    </nav>
+
+    <section class="hero">
+        <div class="hero-content">
+
+            <div class="small-title">PORTFOLIO</div>
+
+            <h1>Irene P. Hernandez</h1>
+
+            <h2>Marketing • Administrative Support • Customer Service</h2>
+
+            <p>
+                Hello, I'm Irene. I'm a marketing student with experience
+                in customer service, administrative support, data processing,
+                and digital tools. This portfolio showcases my experience,
+                skills, and selected projects.
+            </p>
+
+            <div class="buttons">
+                <a href="#projects" class="button primary">
+                    View My Projects
+                </a>
+
+                <a href="#contact" class="button secondary">
+                    Get in Touch
+                </a>
+            </div>
+
+        </div>
+    </section>
+
+
+    <section id="about" class="about">
+
+        <div class="small-title">ABOUT ME</div>
+
+        <h2 class="section-title">A little about me</h2>
+
+        <p class="about-text">
+            I'm currently pursuing a Bachelor of Science in Business
+            Administration major in Marketing at the Polytechnic University
+            of the Philippines. My background includes customer service,
+            administrative support, data processing, and working with
+            digital tools. I enjoy learning new things, organizing
+            information, solving problems, and developing practical ideas
+            through both work and academic projects.
+        </p>
+
+    </section>
+
+
+    <section id="experience">
+
+        <div class="small-title">EXPERIENCE</div>
+
+        <h2 class="section-title">What I have worked on</h2>
+
+        <p class="section-intro">
+            My experience has allowed me to develop skills in communication,
+            organization, accuracy, customer support, and day-to-day
+            business operations.
+        </p>
+
+        <div class="skills-grid">
+
+            <div class="skill">
+                <h3>Customer Service</h3>
+                <p>
+                    Handling customer concerns, providing assistance,
+                    and communicating clearly with different types of clients.
+                </p>
+            </div>
+
+            <div class="skill">
+                <h3>Administrative Support</h3>
+                <p>
+                    Managing information, preparing documents, organizing
+                    records, and supporting business operations.
+                </p>
+            </div>
+
+            <div class="skill">
+                <h3>Data Processing</h3>
+                <p>
+                    Entering, reviewing, and organizing information while
+                    maintaining accuracy and completeness.
+                </p>
+            </div>
+
+        </div>
+
+    </section>
+
+
+    <section id="projects" class="projects">
+
+        <div class="small-title">SELECTED WORK</div>
+
+        <h2 class="section-title">My Projects</h2>
+
+        <p class="section-intro">
+            A collection of selected academic, marketing, and business
+            projects.
+        </p>
+
+        <div class="project-grid">
+
+            <div class="project">
+
+                <div class="project-label">
+                    MARKETING & E-COMMERCE
+                </div>
+
+                <h3>SULIT BA?</h3>
+
+                <p>
+                    The Reality Check Journal, a digital budgeting journal
+                    concept created for Filipino working students and
+                    young professionals.
+                </p>
+
+                <a href="#">View Project →</a>
+
+            </div>
+
+
+            <div class="project">
+
+                <div class="project-label">
+                    RETAIL MANAGEMENT
+                </div>
+
+                <h3>Digital Retail Transformation</h3>
+
+                <p>
+                    An academic project exploring future trends and
+                    challenges brought by technology and digital
+                    transformation in retail management.
+                </p>
+
+                <a href="#">View Project →</a>
+
+            </div>
+
+
+            <div class="project">
+
+                <div class="project-label">
+                    MARKETING RESEARCH
+                </div>
+
+                <h3>Research Project</h3>
+
+                <p>
+                    A quantitative research project examining socio-economic
+                    factors and perceived family readiness among Filipino
+                    Millennials in the National Capital Region.
+                </p>
+
+                <a href="#">View Project →</a>
+
+            </div>
+
+        </div>
+
+    </section>
+
+
+    <section id="skills">
+
+        <div class="small-title">SKILLS</div>
+
+        <h2 class="section-title">What I can do</h2>
+
+        <div class="skills-grid">
+
+            <div class="skill">
+                <h3>Microsoft Office</h3>
+                <p>Word, Excel, PowerPoint</p>
+            </div>
+
+            <div class="skill">
+                <h3>Google Workspace</h3>
+                <p>Docs, Sheets, Drive and other digital tools</p>
+            </div>
+
+            <div class="skill">
+                <h3>Communication</h3>
+                <p>Customer communication and professional correspondence</p>
+            </div>
+
+            <div class="skill">
+                <h3>Research</h3>
+                <p>Information gathering, organization, and analysis</p>
+            </div>
+
+            <div class="skill">
+                <h3>Marketing</h3>
+                <p>Target markets, marketing concepts, and project development</p>
+            </div>
+
+            <div class="skill">
+                <h3>Organization</h3>
+                <p>Records, documents, information, and task management</p>
+            </div>
+
+        </div>
+
+    </section>
+
+
+    <section id="contact" class="contact">
+
+        <div class="small-title">CONTACT</div>
+
+        <h2 class="section-title">Let's connect</h2>
+
+        <p>
+            I'm open to opportunities where I can use my skills,
+            continue learning, and contribute to a team.
+        </p>
+
+        <div class="buttons" style="justify-content:center;">
+
+            <a href="mailto:YOUR-EMAIL@example.com"
+               class="button primary">
+                Email Me
+            </a>
+
+        </div>
+
+    </section>
+
+
+    <footer>
+        © 2026 Irene H. Mengote • Personal Portfolio
+    </footer>
+
+</body>
+</html>
