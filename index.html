@@ -1,517 +1,2332 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-    <title>Irene H. Mengote | Portfolio</title>
+<meta
+  name="description"
+  content="Professional portfolio of Irene H. Mengote — Administrative Support, Customer Service, Marketing, Data Processing, and Virtual Assistance."
+>
 
-    <style>
-        * {
-            box-sizing: border-box;
-            margin: 0;
-            padding: 0;
-        }
+<title>Irene H. Mengote | Professional Portfolio</title>
 
-        html {
-            scroll-behavior: smooth;
-        }
+<style>
+:root{
+  --black:#171417;
+  --ink:#282328;
+  --muted:#706970;
+  --pink:#efc0ce;
+  --pink-deep:#c9859b;
+  --pink-pale:#fff5f8;
+  --pink-line:#e8cbd4;
+  --white:#fff;
+  --offwhite:#fcfafb;
+  --line:#e9e3e6;
+  --shadow:0 18px 55px rgba(23,20,23,.07);
+  --shadow-sm:0 8px 25px rgba(23,20,23,.05);
+}
 
-        body {
-            font-family: Arial, Helvetica, sans-serif;
-            color: #333;
-            background: #faf9f7;
-            line-height: 1.6;
-        }
+*{
+  box-sizing:border-box;
+  margin:0;
+  padding:0;
+}
 
-        nav {
-            position: sticky;
-            top: 0;
-            z-index: 1000;
-            background: rgba(250, 249, 247, 0.95);
-            border-bottom: 1px solid #e8e3dd;
-            padding: 18px 8%;
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-        }
+html{
+  scroll-behavior:smooth;
+}
 
-        .logo {
-            font-size: 20px;
-            font-weight: bold;
-            color: #333;
-        }
+body{
+  font-family:Inter,ui-sans-serif,system-ui,-apple-system,BlinkMacSystemFont,"Segoe UI",sans-serif;
+  color:var(--black);
+  background:var(--white);
+  line-height:1.7;
+}
 
-        nav a {
-            text-decoration: none;
-            color: #555;
-            margin-left: 25px;
-            font-size: 14px;
-        }
+a{
+  color:inherit;
+  text-decoration:none;
+}
 
-        nav a:hover {
-            color: #9a6b78;
-        }
+img{
+  max-width:100%;
+  display:block;
+}
 
-        .hero {
-            min-height: 88vh;
-            display: flex;
-            align-items: center;
-            padding: 80px 10%;
-        }
+.container{
+  width:min(1160px,91%);
+  margin:auto;
+}
 
-        .hero-content {
-            max-width: 750px;
-        }
+section{
+  scroll-margin-top:88px;
+}
 
-        .small-title {
-            color: #9a6b78;
-            font-size: 14px;
-            letter-spacing: 2px;
-            font-weight: bold;
-            margin-bottom: 15px;
-        }
 
-        h1 {
-            font-size: clamp(48px, 8vw, 82px);
-            line-height: 1;
-            margin-bottom: 20px;
-            color: #292525;
-        }
+/* =========================
+   NAVIGATION
+========================= */
 
-        .hero h2 {
-            font-size: 25px;
-            font-weight: normal;
-            color: #666;
-            margin-bottom: 25px;
-        }
+header{
+  position:sticky;
+  top:0;
+  z-index:50;
+  background:rgba(255,255,255,.96);
+  backdrop-filter:blur(16px);
+  border-bottom:1px solid var(--line);
+}
 
-        .hero p {
-            max-width: 650px;
-            color: #666;
-            font-size: 17px;
-            margin-bottom: 35px;
-        }
+nav{
+  min-height:76px;
+  display:flex;
+  align-items:center;
+  justify-content:space-between;
+  gap:30px;
+}
 
-        .buttons {
-            display: flex;
-            gap: 15px;
-            flex-wrap: wrap;
-        }
+.brand{
+  font-size:1rem;
+  font-weight:800;
+  letter-spacing:.02em;
+  white-space:nowrap;
+}
 
-        .button {
-            display: inline-block;
-            padding: 13px 24px;
-            border-radius: 30px;
-            text-decoration: none;
-            font-size: 14px;
-            transition: 0.3s;
-        }
+.brand-mark{
+  display:inline-block;
+  width:8px;
+  height:8px;
+  background:var(--pink-deep);
+  margin-right:9px;
+}
 
-        .primary {
-            background: #9a6b78;
-            color: white;
-        }
+.nav-links{
+  display:flex;
+  list-style:none;
+  gap:22px;
+  align-items:center;
+  flex-wrap:wrap;
+}
 
-        .primary:hover {
-            background: #805664;
-        }
+.nav-links a{
+  font-size:.75rem;
+  font-weight:700;
+  letter-spacing:.03em;
+  color:#494349;
+  transition:.2s;
+}
 
-        .secondary {
-            border: 1px solid #9a6b78;
-            color: #9a6b78;
-        }
+.nav-links a:hover{
+  color:var(--pink-deep);
+}
 
-        .secondary:hover {
-            background: #f0e7e9;
-        }
 
-        section {
-            padding: 90px 10%;
-        }
+/* =========================
+   HERO
+========================= */
 
-        .section-title {
-            font-size: 38px;
-            margin-bottom: 15px;
-            color: #292525;
-        }
+.hero{
+  background:var(--offwhite);
+  border-bottom:1px solid var(--line);
+  position:relative;
+  overflow:hidden;
+}
 
-        .section-intro {
-            color: #777;
-            max-width: 650px;
-            margin-bottom: 45px;
-        }
+.hero:after{
+  content:"";
+  position:absolute;
+  width:360px;
+  height:360px;
+  border-radius:50%;
+  background:var(--pink-pale);
+  right:-150px;
+  top:-130px;
+  z-index:0;
+}
 
-        .about {
-            background: white;
-        }
+.hero-grid{
+  min-height:calc(100vh - 77px);
+  display:grid;
+  grid-template-columns:1.25fr .75fr;
+  gap:75px;
+  align-items:center;
+  position:relative;
+  z-index:1;
+  padding:90px 0;
+}
 
-        .about-text {
-            max-width: 800px;
-            color: #555;
-            font-size: 17px;
-        }
+.kicker{
+  display:flex;
+  align-items:center;
+  gap:13px;
+  text-transform:uppercase;
+  letter-spacing:.2em;
+  font-size:.69rem;
+  font-weight:800;
+  color:var(--pink-deep);
+  margin-bottom:22px;
+}
 
-        .skills-grid {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
-            gap: 18px;
-            margin-top: 35px;
-        }
+.kicker:before{
+  content:"";
+  width:42px;
+  height:1px;
+  background:var(--pink-deep);
+}
 
-        .skill {
-            background: white;
-            padding: 25px;
-            border: 1px solid #eee5e1;
-            border-radius: 15px;
-        }
+h1{
+  font-family:Georgia,"Times New Roman",serif;
+  font-weight:500;
+  font-size:clamp(3.5rem,7vw,6.6rem);
+  line-height:.98;
+  letter-spacing:-.055em;
+  margin-bottom:25px;
+  color:var(--black);
+}
 
-        .skill h3 {
-            margin-bottom: 8px;
-            color: #9a6b78;
-        }
+.hero-title{
+  font-size:1.05rem;
+  font-weight:750;
+  letter-spacing:.01em;
+  max-width:700px;
+  margin-bottom:18px;
+  color:var(--ink);
+}
 
-        .skill p {
-            color: #777;
-            font-size: 14px;
-        }
+.hero-copy{
+  max-width:650px;
+  color:var(--muted);
+  font-size:1rem;
+}
 
-        .projects {
-            background: #f5f1ee;
-        }
+.hero-status{
+  display:inline-flex;
+  align-items:center;
+  gap:8px;
+  margin-top:20px;
+  padding:8px 12px;
+  background:var(--pink-pale);
+  border:1px solid var(--pink-line);
+  color:#5b4b52;
+  font-size:.72rem;
+  font-weight:800;
+  letter-spacing:.04em;
+}
 
-        .project-grid {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
-            gap: 25px;
-        }
+.hero-status:before{
+  content:"";
+  width:6px;
+  height:6px;
+  border-radius:50%;
+  background:var(--pink-deep);
+}
 
-        .project {
-            background: white;
-            padding: 30px;
-            border-radius: 18px;
-            border: 1px solid #eee5e1;
-        }
+.hero-actions{
+  display:flex;
+  gap:12px;
+  flex-wrap:wrap;
+  margin-top:32px;
+}
 
-        .project-label {
-            font-size: 12px;
-            color: #9a6b78;
-            letter-spacing: 1px;
-            font-weight: bold;
-            margin-bottom: 10px;
-        }
+.btn{
+  display:inline-flex;
+  align-items:center;
+  justify-content:center;
+  min-height:46px;
+  padding:0 19px;
+  border:1px solid var(--black);
+  font-size:.79rem;
+  font-weight:800;
+  letter-spacing:.03em;
+  transition:.2s;
+  cursor:pointer;
+}
 
-        .project h3 {
-            font-size: 23px;
-            margin-bottom: 12px;
-        }
+.btn-primary{
+  background:var(--black);
+  color:var(--white);
+}
 
-        .project p {
-            color: #777;
-            font-size: 15px;
-            margin-bottom: 20px;
-        }
+.btn-primary:hover{
+  background:var(--pink-deep);
+  border-color:var(--pink-deep);
+}
 
-        .project a {
-            color: #9a6b78;
-            text-decoration: none;
-            font-weight: bold;
-            font-size: 14px;
-        }
+.btn-light{
+  background:var(--white);
+}
 
-        .contact {
-            text-align: center;
-            background: white;
-        }
+.btn-light:hover{
+  background:var(--pink-pale);
+  border-color:var(--pink-deep);
+}
 
-        .contact p {
-            color: #777;
-            max-width: 600px;
-            margin: 0 auto 25px;
-        }
+.profile-frame{
+  width:min(355px,100%);
+  margin:auto;
+  padding:12px;
+  background:var(--white);
+  border:1px solid var(--line);
+  box-shadow:var(--shadow);
+  position:relative;
+}
 
-        footer {
-            text-align: center;
-            padding: 30px;
-            background: #292525;
-            color: #ddd;
-            font-size: 13px;
-        }
+.profile-frame:before{
+  content:"";
+  position:absolute;
+  left:-9px;
+  bottom:-9px;
+  width:70px;
+  height:70px;
+  border-left:2px solid var(--pink);
+  border-bottom:2px solid var(--pink);
+}
 
-        @media (max-width: 700px) {
-            nav {
-                padding: 15px 5%;
-            }
+.profile-photo{
+  aspect-ratio:4/5;
+  background:var(--pink-pale);
+  display:grid;
+  place-items:center;
+  overflow:hidden;
+}
 
-            nav a {
-                margin-left: 10px;
-                font-size: 12px;
-            }
+.profile-photo img{
+  width:100%;
+  height:100%;
+  object-fit:cover;
+}
 
-            .hero {
-                padding: 70px 7%;
-            }
+.photo-placeholder{
+  text-align:center;
+  color:var(--pink-deep);
+  font-size:.75rem;
+  font-weight:800;
+  text-transform:uppercase;
+  letter-spacing:.12em;
+}
 
-            section {
-                padding: 70px 7%;
-            }
+.photo-placeholder b{
+  display:block;
+  font-family:Georgia,serif;
+  font-size:3.7rem;
+  letter-spacing:-.08em;
+  font-weight:400;
+  color:var(--black);
+  margin-bottom:7px;
+}
 
-            h1 {
-                font-size: 55px;
-            }
-        }
-    </style>
+.profile-caption{
+  padding:13px 3px 2px;
+  font-size:.72rem;
+  letter-spacing:.1em;
+  text-transform:uppercase;
+  color:var(--muted);
+  font-weight:700;
+  text-align:center;
+}
+
+
+/* =========================
+   SECTIONS
+========================= */
+
+.section{
+  padding:105px 0;
+}
+
+.section-alt{
+  background:var(--offwhite);
+  border-top:1px solid var(--line);
+  border-bottom:1px solid var(--line);
+}
+
+.section-head{
+  display:grid;
+  grid-template-columns:.45fr 1fr;
+  gap:55px;
+  align-items:start;
+  margin-bottom:52px;
+}
+
+.section-label{
+  text-transform:uppercase;
+  letter-spacing:.19em;
+  font-size:.68rem;
+  font-weight:850;
+  color:var(--pink-deep);
+  padding-top:8px;
+}
+
+.section-label:before{
+  content:"";
+  display:inline-block;
+  width:28px;
+  height:1px;
+  background:var(--pink-deep);
+  vertical-align:middle;
+  margin-right:10px;
+}
+
+.section-head h2{
+  font-family:Georgia,"Times New Roman",serif;
+  font-size:clamp(2.25rem,4vw,3.6rem);
+  font-weight:500;
+  line-height:1.08;
+  letter-spacing:-.045em;
+  color:var(--black);
+}
+
+.section-head p{
+  color:var(--muted);
+  max-width:690px;
+  margin-top:15px;
+}
+
+
+/* =========================
+   ABOUT
+========================= */
+
+.about-grid{
+  display:grid;
+  grid-template-columns:1.15fr .85fr;
+  gap:75px;
+}
+
+.about-copy{
+  font-size:1.02rem;
+  color:#514b51;
+}
+
+.about-copy p+p{
+  margin-top:19px;
+}
+
+.about-note{
+  border-top:1px solid var(--black);
+  padding-top:18px;
+  margin-top:32px;
+  font-size:.84rem;
+  color:var(--muted);
+}
+
+.fact-list{
+  border-top:1px solid var(--line);
+}
+
+.fact{
+  padding:18px 0;
+  border-bottom:1px solid var(--line);
+  display:grid;
+  grid-template-columns:125px 1fr;
+  gap:15px;
+  font-size:.88rem;
+}
+
+.fact strong{
+  font-size:.68rem;
+  letter-spacing:.13em;
+  text-transform:uppercase;
+  color:var(--pink-deep);
+}
+
+
+/* =========================
+   EXPERIENCE
+========================= */
+
+.experience-list{
+  display:grid;
+  gap:0;
+}
+
+.job{
+  display:grid;
+  grid-template-columns:220px 1fr;
+  gap:55px;
+  padding:42px 0;
+  border-top:1px solid var(--line);
+}
+
+.job:last-child{
+  border-bottom:1px solid var(--line);
+}
+
+.job-meta .date{
+  display:block;
+  font-size:.72rem;
+  line-height:1.55;
+  color:var(--muted);
+  margin-top:7px;
+}
+
+.job-meta .company{
+  font-weight:800;
+  font-size:.91rem;
+}
+
+.job h3{
+  font-size:1.3rem;
+  line-height:1.25;
+  margin-bottom:17px;
+}
+
+.job ul{
+  padding-left:18px;
+  color:#575157;
+  font-size:.91rem;
+}
+
+.job li+li{
+  margin-top:7px;
+}
+
+.recognition{
+  display:inline-block;
+  margin-top:19px;
+  padding:8px 12px;
+  background:var(--pink-pale);
+  border-left:2px solid var(--pink-deep);
+  font-size:.74rem;
+  font-weight:800;
+  color:#4d4147;
+}
+
+
+/* =========================
+   EDUCATION
+========================= */
+
+.education-wrap{
+  display:grid;
+  grid-template-columns:1fr 1fr;
+  gap:22px;
+}
+
+.edu-card{
+  padding:35px;
+  background:var(--black);
+  color:var(--white);
+  min-height:230px;
+  display:flex;
+  flex-direction:column;
+  justify-content:space-between;
+}
+
+.edu-card .edu-label{
+  text-transform:uppercase;
+  letter-spacing:.16em;
+  color:var(--pink);
+  font-size:.67rem;
+  font-weight:800;
+}
+
+.edu-card h3{
+  font-family:Georgia,serif;
+  font-size:1.65rem;
+  font-weight:500;
+  line-height:1.2;
+}
+
+.edu-card p{
+  color:#ddd7da;
+  font-size:.9rem;
+}
+
+.edu-status{
+  padding:35px;
+  background:var(--pink-pale);
+  border:1px solid var(--pink-line);
+  display:flex;
+  flex-direction:column;
+  justify-content:center;
+}
+
+.edu-status strong{
+  font-family:Georgia,serif;
+  font-size:1.7rem;
+  font-weight:500;
+  line-height:1.15;
+}
+
+.edu-status span{
+  margin-top:12px;
+  color:var(--muted);
+  font-size:.86rem;
+}
+
+
+/* =========================
+   PROJECTS
+========================= */
+
+.projects{
+  display:grid;
+  grid-template-columns:repeat(3,1fr);
+  gap:20px;
+}
+
+.project{
+  padding:29px;
+  border:1px solid var(--line);
+  background:var(--white);
+  min-height:300px;
+  transition:.25s;
+}
+
+.project:hover{
+  transform:translateY(-4px);
+  box-shadow:var(--shadow-sm);
+  border-color:var(--pink-line);
+}
+
+.project-number{
+  font-size:.67rem;
+  letter-spacing:.17em;
+  color:var(--pink-deep);
+  font-weight:850;
+}
+
+.project-type{
+  display:inline-block;
+  margin-top:12px;
+  font-size:.65rem;
+  text-transform:uppercase;
+  letter-spacing:.1em;
+  color:var(--muted);
+  font-weight:800;
+}
+
+.project h3{
+  font-family:Georgia,serif;
+  font-size:1.38rem;
+  font-weight:500;
+  line-height:1.22;
+  margin:15px 0 12px;
+}
+
+.project p{
+  font-size:.86rem;
+  color:var(--muted);
+}
+
+.tags{
+  display:flex;
+  gap:6px;
+  flex-wrap:wrap;
+  margin-top:21px;
+}
+
+.tag{
+  padding:4px 8px;
+  background:var(--pink-pale);
+  font-size:.66rem;
+  color:#62545a;
+  font-weight:750;
+}
+
+
+/* =========================
+   SKILLS
+========================= */
+
+.skills-layout{
+  display:grid;
+  grid-template-columns:1fr 1fr;
+  gap:70px;
+}
+
+.skills-list{
+  display:grid;
+  grid-template-columns:1fr 1fr;
+  column-gap:35px;
+}
+
+.skill-group{
+  padding:19px 0;
+  border-top:1px solid var(--line);
+}
+
+.skill-group h3{
+  font-size:.83rem;
+  margin-bottom:8px;
+}
+
+.skill-group p{
+  font-size:.83rem;
+  color:var(--muted);
+}
+
+.tool-list{
+  display:flex;
+  flex-wrap:wrap;
+  gap:8px;
+  align-content:start;
+}
+
+.tool{
+  padding:8px 11px;
+  border:1px solid var(--line);
+  font-size:.74rem;
+  font-weight:700;
+  background:var(--white);
+}
+
+
+/* =========================
+   RECOGNITION
+========================= */
+
+.awards-grid{
+  display:grid;
+  grid-template-columns:repeat(3,1fr);
+  gap:22px;
+}
+
+.award{
+  background:var(--white);
+  border:1px solid var(--line);
+  box-shadow:var(--shadow-sm);
+}
+
+.award-photo{
+  aspect-ratio:4/3;
+  background:var(--pink-pale);
+  display:grid;
+  place-items:center;
+  border-bottom:1px solid var(--line);
+  overflow:hidden;
+}
+
+.award-photo img{
+  width:100%;
+  height:100%;
+  object-fit:contain;
+}
+
+.award-placeholder{
+  text-align:center;
+  padding:20px;
+  color:var(--pink-deep);
+  font-size:.65rem;
+  letter-spacing:.14em;
+  font-weight:850;
+  text-transform:uppercase;
+}
+
+.award-placeholder strong{
+  display:block;
+  color:var(--black);
+  font-family:Georgia,serif;
+  font-size:1.4rem;
+  letter-spacing:0;
+  text-transform:none;
+  font-weight:500;
+  margin-bottom:7px;
+}
+
+.award-body{
+  padding:23px;
+}
+
+.award-body small{
+  font-size:.64rem;
+  text-transform:uppercase;
+  letter-spacing:.14em;
+  color:var(--pink-deep);
+  font-weight:850;
+}
+
+.award-body h3{
+  font-size:1.05rem;
+  line-height:1.3;
+  margin-top:8px;
+}
+
+.award-body p{
+  font-size:.81rem;
+  color:var(--muted);
+  margin-top:6px;
+}
+
+
+/* =========================
+   CERTIFICATIONS
+========================= */
+
+.cert-wrap{
+  margin-top:65px;
+}
+
+.cert-grid{
+  display:grid;
+  grid-template-columns:repeat(2,1fr);
+  gap:0 40px;
+  border-top:1px solid var(--line);
+}
+
+.cert{
+  padding:16px 0;
+  border-bottom:1px solid var(--line);
+}
+
+.cert strong{
+  display:block;
+  font-size:.84rem;
+}
+
+.cert span{
+  display:block;
+  color:var(--muted);
+  font-size:.76rem;
+  margin-top:3px;
+}
+
+
+/* =========================
+   RESUME
+========================= */
+
+.resume-box{
+  margin-top:65px;
+  padding:45px;
+  background:var(--black);
+  color:var(--white);
+  display:flex;
+  align-items:center;
+  justify-content:space-between;
+  gap:40px;
+}
+
+.resume-box h3{
+  font-family:Georgia,serif;
+  font-size:2rem;
+  font-weight:500;
+  margin-bottom:10px;
+}
+
+.resume-box p{
+  color:#ddd7da;
+  font-size:.88rem;
+  max-width:620px;
+}
+
+.resume-actions{
+  display:flex;
+  gap:10px;
+  flex-wrap:wrap;
+  flex-shrink:0;
+}
+
+.resume-actions .btn{
+  border-color:var(--white);
+}
+
+.resume-actions .btn-primary{
+  background:var(--white);
+  color:var(--black);
+}
+
+.resume-actions .btn-primary:hover{
+  background:var(--pink);
+  border-color:var(--pink);
+}
+
+.resume-actions .btn-light{
+  background:transparent;
+  color:var(--white);
+}
+
+.resume-actions .btn-light:hover{
+  background:var(--pink-deep);
+  border-color:var(--pink-deep);
+}
+
+
+/* =========================
+   CONTACT
+========================= */
+
+.contact-section{
+  padding:115px 0;
+}
+
+.contact-box{
+  border-top:1px solid var(--black);
+  border-bottom:1px solid var(--black);
+  padding:65px 0;
+  display:grid;
+  grid-template-columns:1fr 1fr;
+  gap:70px;
+}
+
+.contact-box h2{
+  font-family:Georgia,serif;
+  font-size:clamp(2.6rem,5vw,4.5rem);
+  font-weight:500;
+  line-height:1;
+  letter-spacing:-.05em;
+}
+
+.contact-box p{
+  color:var(--muted);
+  font-size:.93rem;
+  max-width:500px;
+}
+
+.contact-links{
+  margin-top:25px;
+  display:grid;
+  gap:8px;
+}
+
+.contact-link{
+  font-size:.88rem;
+  font-weight:750;
+}
+
+.contact-link:hover{
+  color:var(--pink-deep);
+}
+
+
+/* =========================
+   FOOTER
+========================= */
+
+footer{
+  border-top:1px solid var(--line);
+  padding:25px 0;
+  color:var(--muted);
+  font-size:.72rem;
+}
+
+.footer-inner{
+  display:flex;
+  justify-content:space-between;
+  gap:20px;
+}
+
+
+/* =========================
+   RESPONSIVE
+========================= */
+
+@media(max-width:950px){
+
+  .nav-links{
+    gap:12px;
+  }
+
+  .hero-grid{
+    grid-template-columns:1fr;
+    min-height:auto;
+    padding:80px 0;
+  }
+
+  .profile-frame{
+    order:-1;
+  }
+
+  .about-grid,
+  .contact-box{
+    grid-template-columns:1fr;
+  }
+
+  .education-wrap,
+  .skills-layout{
+    grid-template-columns:1fr;
+  }
+
+  .projects,
+  .awards-grid{
+    grid-template-columns:1fr 1fr;
+  }
+
+  .job{
+    grid-template-columns:170px 1fr;
+    gap:35px;
+  }
+
+  .resume-box{
+    flex-direction:column;
+    align-items:flex-start;
+  }
+}
+
+
+@media(max-width:700px){
+
+  nav{
+    padding:15px 0;
+    align-items:flex-start;
+  }
+
+  .nav-links{
+    display:none;
+  }
+
+  .section{
+    padding:80px 0;
+  }
+
+  .section-head{
+    grid-template-columns:1fr;
+    gap:15px;
+    margin-bottom:35px;
+  }
+
+  .projects,
+  .awards-grid,
+  .cert-grid,
+  .skills-list{
+    grid-template-columns:1fr;
+  }
+
+  .job{
+    grid-template-columns:1fr;
+    gap:18px;
+    padding:32px 0;
+  }
+
+  .fact{
+    grid-template-columns:105px 1fr;
+  }
+
+  .resume-box{
+    padding:32px;
+  }
+
+  .resume-box h3{
+    font-size:1.7rem;
+  }
+
+  .contact-section{
+    padding:85px 0;
+  }
+
+  .footer-inner{
+    flex-direction:column;
+  }
+}
+
+
+@media(max-width:480px){
+
+  h1{
+    font-size:3.5rem;
+  }
+
+  .hero-grid{
+    padding:65px 0;
+  }
+
+  .edu-card,
+  .edu-status{
+    padding:27px;
+  }
+
+  .resume-actions{
+    width:100%;
+    flex-direction:column;
+  }
+
+  .resume-actions .btn{
+    width:100%;
+  }
+}
+</style>
 </head>
+
 
 <body>
 
+<header>
+  <div class="container">
     <nav>
-        <div class="logo">IRENE.</div>
 
-        <div>
-            <a href="#about">About</a>
-            <a href="#experience">Experience</a>
-            <a href="#projects">Projects</a>
-            <a href="#skills">Skills</a>
-            <a href="#contact">Contact</a>
-        </div>
+      <a href="#home" class="brand">
+        <span class="brand-mark"></span>
+        Irene H. Mengote
+      </a>
+
+      <ul class="nav-links">
+        <li><a href="#about">About</a></li>
+        <li><a href="#experience">Experience</a></li>
+        <li><a href="#education">Education</a></li>
+        <li><a href="#projects">Projects</a></li>
+        <li><a href="#skills">Skills</a></li>
+        <li><a href="#recognition">Recognition</a></li>
+        <li><a href="#resume">Resume</a></li>
+        <li><a href="#contact">Contact</a></li>
+      </ul>
+
     </nav>
+  </div>
+</header>
 
-    <section class="hero">
-        <div class="hero-content">
 
-            <div class="small-title">PORTFOLIO</div>
+<main>
 
-            <h1>Irene H. Mengote</h1>
 
-            <h2>Marketing • Administrative Support • Customer Service</h2>
+<!-- =========================
+     HERO
+========================= -->
 
-            <p>
-                Hello, I'm Irene. I'm a marketing student with experience
-                in customer service, administrative support, data processing,
-                and digital tools. This portfolio showcases my experience,
-                skills, and selected projects.
-            </p>
+<section id="home" class="hero">
 
-            <div class="buttons">
-                <a href="#projects" class="button primary">
-                    View My Projects
-                </a>
+  <div class="container">
 
-                <a href="#contact" class="button secondary">
-                    Get in Touch
-                </a>
-            </div>
+    <div class="hero-grid">
 
+      <div>
+
+        <div class="kicker">
+          Professional Portfolio
         </div>
-    </section>
 
+        <h1>
+          Irene H.<br>
+          Mengote
+        </h1>
 
-    <section id="about" class="about">
+        <div class="hero-title">
+          Administrative Support | Marketing | Customer Service | Virtual Assistance
+        </div>
 
-        <div class="small-title">ABOUT ME</div>
-
-        <h2 class="section-title">A little about me</h2>
-
-        <p class="about-text">
-            I'm currently pursuing a Bachelor of Science in Business
-            Administration major in Marketing at the Polytechnic University
-            of the Philippines. My background includes customer service,
-            administrative support, data processing, and working with
-            digital tools. I enjoy learning new things, organizing
-            information, solving problems, and developing practical ideas
-            through both work and academic projects.
+        <p class="hero-copy">
+          Detail-oriented and adaptable professional with over six years of
+          combined experience in customer service, administrative support,
+          data processing, and business operations, with an academic focus
+          in Marketing Management.
         </p>
 
-    </section>
+        <div class="hero-status">
+          Undergraduate — BSBA Marketing Management
+        </div>
 
+        <div class="hero-actions">
 
-    <section id="experience">
+          <a href="#experience" class="btn btn-primary">
+            View Experience
+          </a>
 
-        <div class="small-title">EXPERIENCE</div>
+          <a href="#projects" class="btn btn-light">
+            View Portfolio
+          </a>
 
-        <h2 class="section-title">What I have worked on</h2>
-
-        <p class="section-intro">
-            My experience has allowed me to develop skills in communication,
-            organization, accuracy, customer support, and day-to-day
-            business operations.
-        </p>
-
-        <div class="skills-grid">
-
-            <div class="skill">
-                <h3>Customer Service</h3>
-                <p>
-                    Handling customer concerns, providing assistance,
-                    and communicating clearly with different types of clients.
-                </p>
-            </div>
-
-            <div class="skill">
-                <h3>Administrative Support</h3>
-                <p>
-                    Managing information, preparing documents, organizing
-                    records, and supporting business operations.
-                </p>
-            </div>
-
-            <div class="skill">
-                <h3>Data Processing</h3>
-                <p>
-                    Entering, reviewing, and organizing information while
-                    maintaining accuracy and completeness.
-                </p>
-            </div>
+          <a href="Irene_Mengote_Resume.pdf"
+             class="btn btn-light"
+             target="_blank">
+            View Resume
+          </a>
 
         </div>
 
-    </section>
+      </div>
 
 
-    <section id="projects" class="projects">
+      <div class="profile-frame">
 
-        <div class="small-title">SELECTED WORK</div>
+        <div class="profile-photo">
 
-        <h2 class="section-title">My Projects</h2>
+          <!-- Replace the placeholder below with:
+          <img src="profile.jpg" alt="Irene H. Mengote">
+          -->
 
-        <p class="section-intro">
-            A collection of selected academic, marketing, and business
-            projects.
-        </p>
-
-        <div class="project-grid">
-
-            <div class="project">
-
-                <div class="project-label">
-                    MARKETING & E-COMMERCE
-                </div>
-
-                <h3>SULIT BA?</h3>
-
-                <p>
-                    The Reality Check Journal, a digital budgeting journal
-                    concept created for Filipino working students and
-                    young professionals.
-                </p>
-
-                <a href="#">View Project →</a>
-
-            </div>
-
-
-            <div class="project">
-
-                <div class="project-label">
-                    RETAIL MANAGEMENT
-                </div>
-
-                <h3>Digital Retail Transformation</h3>
-
-                <p>
-                    An academic project exploring future trends and
-                    challenges brought by technology and digital
-                    transformation in retail management.
-                </p>
-
-                <a href="#">View Project →</a>
-
-            </div>
-
-
-            <div class="project">
-
-                <div class="project-label">
-                    MARKETING RESEARCH
-                </div>
-
-                <h3>Research Project</h3>
-
-                <p>
-                    A quantitative research project examining socio-economic
-                    factors and perceived family readiness among Filipino
-                    Millennials in the National Capital Region.
-                </p>
-
-                <a href="#">View Project →</a>
-
-            </div>
+          <div class="photo-placeholder">
+            <b>IH</b>
+            Profile Photo
+          </div>
 
         </div>
 
-    </section>
-
-
-    <section id="skills">
-
-        <div class="small-title">SKILLS</div>
-
-        <h2 class="section-title">What I can do</h2>
-
-        <div class="skills-grid">
-
-            <div class="skill">
-                <h3>Microsoft Office</h3>
-                <p>Word, Excel, PowerPoint</p>
-            </div>
-
-            <div class="skill">
-                <h3>Google Workspace</h3>
-                <p>Docs, Sheets, Drive and other digital tools</p>
-            </div>
-
-            <div class="skill">
-                <h3>Communication</h3>
-                <p>Customer communication and professional correspondence</p>
-            </div>
-
-            <div class="skill">
-                <h3>Research</h3>
-                <p>Information gathering, organization, and analysis</p>
-            </div>
-
-            <div class="skill">
-                <h3>Marketing</h3>
-                <p>Target markets, marketing concepts, and project development</p>
-            </div>
-
-            <div class="skill">
-                <h3>Organization</h3>
-                <p>Records, documents, information, and task management</p>
-            </div>
-
+        <div class="profile-caption">
+          Administrative Support · Marketing · Customer Service
         </div>
 
-    </section>
+      </div>
+
+    </div>
+
+  </div>
+
+</section>
 
 
-    <section id="contact" class="contact">
 
-        <div class="small-title">CONTACT</div>
+<!-- =========================
+     ABOUT
+========================= -->
 
-        <h2 class="section-title">Let's connect</h2>
+<section id="about" class="section">
+
+  <div class="container">
+
+    <div class="section-head">
+
+      <div class="section-label">
+        01 / About
+      </div>
+
+      <div>
+
+        <h2>
+          A dependable professional with a business and marketing mindset.
+        </h2>
 
         <p>
-            I'm open to opportunities where I can use my skills,
-            continue learning, and contribute to a team.
+          A combination of hands-on work experience, business education,
+          and continuous professional development.
         </p>
 
-        <div class="buttons" style="justify-content:center;">
+      </div>
 
-            <a href="mailto:YOUR-EMAIL@example.com"
-               class="button primary">
-                Email Me
-            </a>
+    </div>
+
+
+    <div class="about-grid">
+
+      <div class="about-copy">
+
+        <p>
+          I am a detail-oriented professional with experience in customer
+          service, administrative support, data processing, records management,
+          coordination, and day-to-day business operations.
+        </p>
+
+        <p>
+          My previous roles allowed me to work with customers, company
+          records, schedules, reports, applications, payments, social media
+          inquiries, and internal business processes while maintaining
+          accuracy and professionalism.
+        </p>
+
+        <p>
+          I also have an academic background in Business Administration with
+          a major in Marketing Management, giving me additional exposure to
+          marketing research, business planning, retail management,
+          communication, and product development.
+        </p>
+
+        <div class="about-note">
+          Currently building a professional portfolio focused on
+          administrative support, virtual assistance, marketing support,
+          customer service, and digital business operations.
+        </div>
+
+      </div>
+
+
+      <div class="fact-list">
+
+        <div class="fact">
+          <strong>Focus</strong>
+          <span>Administrative Support &amp; Virtual Assistance</span>
+        </div>
+
+        <div class="fact">
+          <strong>Background</strong>
+          <span>Customer Service &amp; Business Operations</span>
+        </div>
+
+        <div class="fact">
+          <strong>Marketing</strong>
+          <span>Marketing Management &amp; Research</span>
+        </div>
+
+        <div class="fact">
+          <strong>Strengths</strong>
+          <span>Accuracy, organization, communication, adaptability</span>
+        </div>
+
+        <div class="fact">
+          <strong>Location</strong>
+          <span>Tacloban City, Leyte, Philippines</span>
+        </div>
+
+      </div>
+
+    </div>
+
+  </div>
+
+</section>
+
+
+
+<!-- =========================
+     EXPERIENCE
+========================= -->
+
+<section id="experience" class="section section-alt">
+
+  <div class="container">
+
+    <div class="section-head">
+
+      <div class="section-label">
+        02 / Experience
+      </div>
+
+      <div>
+
+        <h2>
+          Professional experience built through real operations.
+        </h2>
+
+        <p>
+          More than six years of combined experience across customer service,
+          administrative support, and business operations.
+        </p>
+
+      </div>
+
+    </div>
+
+
+    <div class="experience-list">
+
+
+      <!-- Foundever -->
+
+      <article class="job">
+
+        <div class="job-meta">
+
+          <div class="company">
+            Foundever
+          </div>
+
+          <span class="date">
+            20 May 2024 – 7 February 2026
+          </span>
 
         </div>
 
-    </section>
+
+        <div>
+
+          <h3>
+            Customer Service Representative I
+          </h3>
+
+          <ul>
+
+            <li>
+              Processed and reviewed customer and application information
+              while ensuring accuracy and completeness.
+            </li>
+
+            <li>
+              Handled customer inquiries and provided clear and professional
+              assistance regarding applications and account-related concerns.
+            </li>
+
+            <li>
+              Coordinated information between customers, internal teams,
+              and other stakeholders.
+            </li>
+
+            <li>
+              Monitored application status, documents, and payments to support
+              timely processing.
+            </li>
+
+            <li>
+              Maintained accuracy and professionalism while handling a
+              fast-paced workload.
+            </li>
+
+          </ul>
+
+          <div class="recognition">
+            Top Agent — Quarter 1 &amp; 2 of 2025
+          </div>
+
+        </div>
+
+      </article>
 
 
-    <footer>
-        © 2026 Irene H. Mengote • Personal Portfolio
-    </footer>
+
+      <!-- USAS -->
+
+      <article class="job">
+
+        <div class="job-meta">
+
+          <div class="company">
+            USAS Techno Corp.
+          </div>
+
+          <span class="date">
+            3 May 2021 – 29 March 2024
+          </span>
+
+        </div>
+
+
+        <div>
+
+          <h3>
+            Administrative Assistant
+          </h3>
+
+          <ul>
+
+            <li>
+              Managed company email and Facebook inquiries and responded
+              to customers professionally.
+            </li>
+
+            <li>
+              Coordinated meetings, appointments, and schedules.
+            </li>
+
+            <li>
+              Prepared reports, correspondence, and administrative documents.
+            </li>
+
+            <li>
+              Assisted with payroll processing and employee government
+              benefit applications.
+            </li>
+
+            <li>
+              Maintained organized company records and filing systems.
+            </li>
+
+            <li>
+              Handled confidential employee and company information with
+              discretion.
+            </li>
+
+            <li>
+              Provided general administrative support for daily business
+              operations.
+            </li>
+
+          </ul>
+
+          <div class="recognition">
+            Office Star Award — 2023
+          </div>
+
+        </div>
+
+      </article>
+
+
+
+      <!-- McDonald's -->
+
+      <article class="job">
+
+        <div class="job-meta">
+
+          <div class="company">
+            McDonald's
+          </div>
+
+          <span class="date">
+            21 October 2019 – 30 April 2021
+          </span>
+
+        </div>
+
+
+        <div>
+
+          <h3>
+            Service Crew &amp; Guest Experience Leader
+          </h3>
+
+          <ul>
+
+            <li>
+              Delivered friendly and efficient customer service by taking
+              orders, preparing meals, and addressing guest concerns.
+            </li>
+
+            <li>
+              Operated the Park and Pay service system, taking customer
+              orders and payments directly from parked vehicles.
+            </li>
+
+            <li>
+              Processed POS transactions, prepared orders, and ensured
+              accurate and timely delivery.
+            </li>
+
+            <li>
+              Maintained promotional displays and marketing materials
+              to support brand campaigns.
+            </li>
+
+            <li>
+              Promoted in-store campaigns and supported guest experience
+              initiatives.
+            </li>
+
+            <li>
+              Maintained cleanliness and food safety standards to support
+              smooth daily operations.
+            </li>
+
+            <li>
+              Demonstrated multitasking, attention to detail, and time
+              management during peak hours.
+            </li>
+
+          </ul>
+
+          <div class="recognition">
+            Excellent Service Crew Award
+          </div>
+
+        </div>
+
+      </article>
+
+
+    </div>
+
+  </div>
+
+</section>
+
+
+
+<!-- =========================
+     EDUCATION
+========================= -->
+
+<section id="education" class="section">
+
+  <div class="container">
+
+    <div class="section-head">
+
+      <div class="section-label">
+        03 / Education
+      </div>
+
+      <div>
+
+        <h2>
+          Business education with a marketing focus.
+        </h2>
+
+        <p>
+          Academic background supporting practical understanding of business,
+          marketing, research, and business operations.
+        </p>
+
+      </div>
+
+    </div>
+
+
+    <div class="education-wrap">
+
+
+      <div class="edu-card">
+
+        <span class="edu-label">
+          Polytechnic University of the Philippines
+        </span>
+
+        <h3>
+          Bachelor of Science in Business Administration
+        </h3>
+
+        <p>
+          Major in Marketing Management
+        </p>
+
+      </div>
+
+
+      <div class="edu-status">
+
+        <strong>
+          Undergraduate — BSBA Marketing Management
+        </strong>
+
+        <span>
+          Academic background covering marketing, business management,
+          research, retail management, business planning, and related
+          business concepts.
+        </span>
+
+      </div>
+
+
+    </div>
+
+  </div>
+
+</section>
+
+
+
+<!-- =========================
+     PROJECTS
+========================= -->
+
+<section id="projects" class="section section-alt">
+
+  <div class="container">
+
+    <div class="section-head">
+
+      <div class="section-label">
+        04 / Projects
+      </div>
+
+      <div>
+
+        <h2>
+          Selected academic and portfolio work.
+        </h2>
+
+        <p>
+          Work demonstrating research, marketing, business planning,
+          communication, and presentation skills.
+        </p>
+
+      </div>
+
+    </div>
+
+
+    <div class="projects">
+
+
+      <article class="project">
+
+        <div class="project-number">
+          PROJECT 01
+        </div>
+
+        <span class="project-type">
+          Academic / Marketing Project
+        </span>
+
+        <h3>
+          SULIT BA? — The Reality Check Journal
+        </h3>
+
+        <p>
+          Marketing and e-commerce concept for a digital budgeting journal
+          designed for Filipino working students and young professionals.
+        </p>
+
+        <div class="tags">
+          <span class="tag">Marketing</span>
+          <span class="tag">Market Research</span>
+          <span class="tag">Branding</span>
+          <span class="tag">Product Development</span>
+        </div>
+
+      </article>
+
+
+
+      <article class="project">
+
+        <div class="project-number">
+          PROJECT 02
+        </div>
+
+        <span class="project-type">
+          Academic Research
+        </span>
+
+        <h3>
+          Technology &amp; Digital Transformation in Retail Management
+        </h3>
+
+        <p>
+          Academic project exploring technology and digital transformation
+          in retail management through research and presentation work.
+        </p>
+
+        <div class="tags">
+          <span class="tag">Research</span>
+          <span class="tag">Retail Management</span>
+          <span class="tag">Presentation</span>
+        </div>
+
+      </article>
+
+
+
+      <article class="project">
+
+        <div class="project-number">
+          PROJECT 03
+        </div>
+
+        <span class="project-type">
+          Academic Research
+        </span>
+
+        <h3>
+          Marketing Research Project
+        </h3>
+
+        <p>
+          Quantitative research on socio-economic status and perceived
+          family readiness among Filipino Millennials in NCR.
+        </p>
+
+        <div class="tags">
+          <span class="tag">Survey Design</span>
+          <span class="tag">Data Collection</span>
+          <span class="tag">Quantitative Analysis</span>
+        </div>
+
+      </article>
+
+
+    </div>
+
+  </div>
+
+</section>
+
+
+
+<!-- =========================
+     SKILLS
+========================= -->
+
+<section id="skills" class="section">
+
+  <div class="container">
+
+    <div class="section-head">
+
+      <div class="section-label">
+        05 / Skills
+      </div>
+
+      <div>
+
+        <h2>
+          Practical skills for dependable support.
+        </h2>
+
+        <p>
+          Core capabilities and digital tools reflected in my professional
+          experience, education, and portfolio work.
+        </p>
+
+      </div>
+
+    </div>
+
+
+    <div class="skills-layout">
+
+
+      <div class="skills-list">
+
+
+        <div class="skill-group">
+
+          <h3>
+            Administrative Support
+          </h3>
+
+          <p>
+            Administrative Support · Data Entry &amp; Records Management ·
+            Document Preparation · Scheduling &amp; Coordination
+          </p>
+
+        </div>
+
+
+        <div class="skill-group">
+
+          <h3>
+            Customer Service
+          </h3>
+
+          <p>
+            Customer Service · Written &amp; Verbal Communication ·
+            Problem Solving · Team Collaboration
+          </p>
+
+        </div>
+
+
+        <div class="skill-group">
+
+          <h3>
+            Work Habits
+          </h3>
+
+          <p>
+            Time Management &amp; Multitasking · Attention to Detail ·
+            Adaptability · Accuracy
+          </p>
+
+        </div>
+
+
+        <div class="skill-group">
+
+          <h3>
+            Business &amp; Marketing Support
+          </h3>
+
+          <p>
+            Basic Bookkeeping · Business Operations · Marketing Support ·
+            Research · Business Planning
+          </p>
+
+        </div>
+
+
+      </div>
+
+
+      <div>
+
+        <h3 style="font-size:.8rem;text-transform:uppercase;letter-spacing:.15em;margin-bottom:17px">
+          Digital Tools
+        </h3>
+
+        <div class="tool-list">
+
+          <span class="tool">Microsoft Office</span>
+          <span class="tool">Microsoft Word</span>
+          <span class="tool">Microsoft Excel</span>
+          <span class="tool">PowerPoint</span>
+          <span class="tool">Google Workspace</span>
+          <span class="tool">Google Docs</span>
+          <span class="tool">Google Sheets</span>
+          <span class="tool">Canva</span>
+          <span class="tool">Slack</span>
+          <span class="tool">Zoom</span>
+          <span class="tool">Facebook</span>
+          <span class="tool">Social Media Platforms</span>
+
+        </div>
+
+      </div>
+
+
+    </div>
+
+  </div>
+
+</section>
+
+
+
+<!-- =========================
+     RECOGNITION + CERTIFICATIONS
+========================= -->
+
+<section id="recognition" class="section section-alt">
+
+  <div class="container">
+
+
+    <div class="section-head">
+
+      <div class="section-label">
+        06 / Recognition
+      </div>
+
+      <div>
+
+        <h2>
+          Performance recognized by previous employers.
+        </h2>
+
+        <p>
+          Professional awards highlighting service, performance, and
+          contribution.
+        </p>
+
+      </div>
+
+    </div>
+
+
+    <div class="awards-grid">
+
+
+      <!-- FOUNDEVER -->
+
+      <article class="award">
+
+        <div class="award-photo">
+
+          <img
+            src="top-agent-q1-q2-2025.jpg"
+            alt="Foundever Top Agent Award"
+          >
+
+        </div>
+
+        <div class="award-body">
+
+          <small>
+            Foundever
+          </small>
+
+          <h3>
+            Top Agent — Quarter 1 &amp; 2 of 2025
+          </h3>
+
+          <p>
+            Recognition received during my Customer Service Representative I role.
+          </p>
+
+        </div>
+
+      </article>
+
+
+
+      <!-- USAS -->
+
+      <article class="award">
+
+        <div class="award-photo">
+
+          <!-- Add your award image when ready:
+          <img
+            src="office-star-award-2023.jpg"
+            alt="USAS Techno Corp. Office Star Award"
+          >
+          -->
+
+          <div class="award-placeholder">
+
+            <strong>
+              USAS Techno Corp.
+            </strong>
+
+            Award photo can be added here
+
+          </div>
+
+        </div>
+
+        <div class="award-body">
+
+          <small>
+            USAS Techno Corp.
+          </small>
+
+          <h3>
+            Office Star Award — 2023
+          </h3>
+
+          <p>
+            Recognition received during my Administrative Assistant role.
+          </p>
+
+        </div>
+
+      </article>
+
+
+
+      <!-- MCDONALD'S -->
+
+      <article class="award">
+
+        <div class="award-photo">
+
+          <!-- Add your award image when ready:
+          <img
+            src="excellent-service-crew-award.jpg"
+            alt="McDonald's Excellent Service Crew Award"
+          >
+          -->
+
+          <div class="award-placeholder">
+
+            <strong>
+              McDonald's
+            </strong>
+
+            Award photo can be added here
+
+          </div>
+
+        </div>
+
+        <div class="award-body">
+
+          <small>
+            McDonald's
+          </small>
+
+          <h3>
+            Excellent Service Crew Award
+          </h3>
+
+          <p>
+            Recognition received during my Service Crew &amp;
+            Guest Experience Leader role.
+          </p>
+
+        </div>
+
+      </article>
+
+
+    </div>
+
+
+
+    <!-- CERTIFICATIONS -->
+
+    <div class="cert-wrap">
+
+      <div class="section-head" style="margin-bottom:28px">
+
+        <div class="section-label">
+          Certifications
+        </div>
+
+        <div>
+
+          <h2 style="font-size:2.2rem">
+            Continuous learning.
+          </h2>
+
+        </div>
+
+      </div>
+
+
+      <div class="cert-grid">
+
+
+        <div class="cert">
+
+          <strong>
+            Certificate of Completion —
+            English as Medium of Instruction
+          </strong>
+
+          <span>
+            TESDA · 2026
+          </span>
+
+        </div>
+
+
+        <div class="cert">
+
+          <strong>
+            Certificate of Completion —
+            Participating in Workplace Communication
+          </strong>
+
+          <span>
+            TESDA · 2026
+          </span>
+
+        </div>
+
+
+        <div class="cert">
+
+          <strong>
+            Certificate of Completion —
+            Receiving and Responding to Workplace Communication
+          </strong>
+
+          <span>
+            TESDA · 2026
+          </span>
+
+        </div>
+
+
+        <div class="cert">
+
+          <strong>
+            Certificate of Accomplishment —
+            Hazard and Risk Assessment Fundamentals
+          </strong>
+
+          <span>
+            University of the Philippines · 2026
+          </span>
+
+        </div>
+
+
+        <div class="cert">
+
+          <strong>
+            Certificate of Accomplishment —
+            Basics of Resilience
+          </strong>
+
+          <span>
+            University of the Philippines · 2026
+          </span>
+
+        </div>
+
+
+        <div class="cert">
+
+          <strong>
+            Certificate of Accomplishment —
+            Business Concepts, Ideation &amp; the Business Plan
+          </strong>
+
+          <span>
+            University of the Philippines · 2026
+          </span>
+
+        </div>
+
+
+        <div class="cert">
+
+          <strong>
+            Career Service Professional Eligibility
+          </strong>
+
+          <span>
+            Civil Service Commission · 2023
+          </span>
+
+        </div>
+
+
+        <div class="cert">
+
+          <strong>
+            Teaching English as a Foreign Language Course — 120 hours
+          </strong>
+
+          <span>
+            Teacher Record · 2026
+          </span>
+
+        </div>
+
+
+        <div class="cert">
+
+          <strong>
+            EF SET English Certificate — 73/100, C2 Proficient
+          </strong>
+
+          <span>
+            2026
+          </span>
+
+        </div>
+
+
+      </div>
+
+    </div>
+
+
+  </div>
+
+</section>
+
+
+
+<!-- =========================
+     RESUME
+========================= -->
+
+<section id="resume" class="section">
+
+  <div class="container">
+
+    <div class="section-head">
+
+      <div class="section-label">
+        07 / Resume
+      </div>
+
+      <div>
+
+        <h2>
+          A concise view of my professional background.
+        </h2>
+
+        <p>
+          My resume provides a focused overview of my experience, education,
+          skills, certifications, and professional qualifications.
+        </p>
+
+      </div>
+
+    </div>
+
+
+    <div class="resume-box">
+
+      <div>
+
+        <h3>
+          My Professional Resume
+        </h3>
+
+        <p>
+          View or download my resume for a more detailed overview of my
+          professional experience and qualifications.
+        </p>
+
+      </div>
+
+
+      <div class="resume-actions">
+
+        <a
+          class="btn btn-primary"
+          href="Irene_Mengote_Resume.pdf"
+          target="_blank"
+        >
+          View Resume
+        </a>
+
+        <a
+          class="btn btn-light"
+          href="Irene_Mengote_Resume.pdf"
+          download
+        >
+          Download PDF
+        </a>
+
+      </div>
+
+    </div>
+
+  </div>
+
+</section>
+
+
+
+<!-- =========================
+     CONTACT
+========================= -->
+
+<section id="contact" class="contact-section">
+
+  <div class="container">
+
+    <div class="contact-box">
+
+
+      <div>
+
+        <div class="kicker">
+          08 / Contact
+        </div>
+
+        <h2>
+          Let's work<br>
+          together.
+        </h2>
+
+      </div>
+
+
+      <div>
+
+        <p>
+          I’m open to opportunities where I can contribute my
+          administrative, customer service, data processing, and marketing
+          skills while continuing to grow professionally.
+        </p>
+
+
+        <div class="contact-links">
+
+          <a
+            class="contact-link"
+            href="mailto:irenemengote20@gmail.com"
+          >
+            irenemengote20@gmail.com
+          </a>
+
+
+          <a
+            class="contact-link"
+            href="tel:+639322532886"
+          >
+            +63 932 253 2886
+          </a>
+
+
+          <a
+            class="contact-link"
+            href="https://www.linkedin.com/in/irene-mengote/"
+            target="_blank"
+            rel="noopener"
+          >
+            linkedin.com/in/irene-mengote/
+          </a>
+
+
+          <span style="font-size:.78rem;color:var(--muted)">
+            Tacloban City, Leyte, Philippines
+          </span>
+
+        </div>
+
+      </div>
+
+
+    </div>
+
+  </div>
+
+</section>
+
+
+</main>
+
+
+
+<!-- =========================
+     FOOTER
+========================= -->
+
+<footer>
+
+  <div class="container footer-inner">
+
+    <span>
+      © <span id="year"></span> Irene H. Mengote
+    </span>
+
+    <span>
+      Professional Portfolio
+    </span>
+
+  </div>
+
+</footer>
+
+
+<script>
+document.getElementById('year').textContent = new Date().getFullYear();
+</script>
 
 </body>
 </html>
