@@ -282,12 +282,15 @@ h1{
   border-bottom:2px solid var(--pink);
 }
 
-.profile-photo{
-  aspect-ratio:4/5;
-  background:var(--pink-pale);
-  display:grid;
-  place-items:center;
-  overflow:hidden;
+.profile-photo {
+  width: 220px;
+  max-width: 100%;
+  aspect-ratio: 4/5;
+  margin: 0 auto;
+  background: var(--pink-pale);
+  display: grid;
+  place-items: center;
+  overflow: hidden;
 }
 
 .profile-photo img{
@@ -316,19 +319,19 @@ h1{
 }
 
 .profile-caption {
-  display: block !important;
-  visibility: visible !important;
-  opacity: 1 !important;
-  position: relative;
+  display: block;
   width: 100%;
-  margin-top: 15px;
-  padding: 10px;
-  color: #000000 !important;
-  background: #fce4ec;
-  font-size: 13px;
-  text-align: center;
+  max-width: 280px;
+  margin: 12px auto 0;
+  padding: 5px;
+  font-size: 11px;
+  letter-spacing: 0.05em;
+  line-height: 1.6;
+  text-transform: uppercase;
+  color: var(--muted);
   font-weight: 700;
-  z-index: 10;
+  text-align: center;
+  white-space: normal;
 }
 
 
