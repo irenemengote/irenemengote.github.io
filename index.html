@@ -283,20 +283,18 @@ h1{
 }
 
 .profile-photo {
-  width: 220px;
-  max-width: 100%;
   aspect-ratio: 4/5;
-  margin: 0 auto;
+  width: 100%;
   background: var(--pink-pale);
   display: grid;
   place-items: center;
   overflow: hidden;
 }
 
-.profile-photo img{
-  width:100%;
-  height:100%;
-  object-fit:cover;
+.profile-photo img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
 }
 
 .photo-placeholder{
@@ -320,17 +318,15 @@ h1{
 
 .profile-caption {
   display: block;
-  visibility: visible;
-  opacity: 1;
   width: 100%;
-  margin: 15px auto 0;
-  padding: 10px 5px;
-  font-size: 12px;
-  line-height: 1.6;
+  padding: 13px 3px 10px;
+  font-size: 0.72rem;
   letter-spacing: 0.05em;
-  color: #333333;
+  text-transform: uppercase;
+  color: var(--muted);
   font-weight: 700;
   text-align: center;
+  line-height: 1.6;
   white-space: normal;
 }
 
